@@ -8,11 +8,10 @@ func Dot(a, b []float32) float32 {
 	}
 
 	var total float32
-	
+
 	for i := range a {
 		total += a[i] * b[i]
 	}
 
 	return total
 }
-

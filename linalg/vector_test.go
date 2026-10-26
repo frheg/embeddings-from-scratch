@@ -35,11 +35,10 @@ func TestDot(t *testing.T) {
 }
 
 func TestDotPanicsOnMismatch(t *testing.T) {
-      defer func() {
-              if r := recover(); r == nil {
-                      t.Error("expected panic, got none")
-              }
-      }()
-      Dot([]float32{1, 2}, []float32{1})
+	defer func() {
+		if r := recover(); r == nil {
+			t.Error("expected panic, got none")
+		}
+	}()
+	Dot([]float32{1, 2}, []float32{1})
 }
-
